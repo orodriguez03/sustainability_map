@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang='en'>	
+<head>
+	<meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hamline Sustainability Map</title>
+    <link rel="icon" href="icons/favicon.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.theme.css">
+
+</head>	
+<body>
+	
+<div id='wrapper'>
+    <h1>Sustainability @ Hamline</h1>
+    
+    <div id="mobile-button-wrapper">
+        <div class="button aboutbutton" id="about-mobile">About</div>
+    </div>
+    <div id="map" class="map">
+        
+    </div>
+    
+    <div id="button-wrapper">
+        <div class="button aboutbutton" id="about">About the map</div><br>
+        <div class="button flyoverbutton">Flyover Tour</div>
+        
+        <div class="blurb" id="blurb1">
+        This online tour aims to frame historical, current, and future efforts toward sustainability on Hamline's campus and beyond.
+        </div>
+        
+        <div class="blurb" id="blurb2">
+        Explore the "tour stops" by clicking the red markers, and learn how sustainable practices are being implemented at Hamline.
+        </div>
+        
+        <div id="collapse-button">&lsaquo;</div>
+        
+        <div class="blurb" id="blurb3">
+          Do you want a location added? Fill out the <a href="https://forms.gle/k5XUmzb8dqWWHuQs7">sustainability map form</a>
+      </div>
+
+  </div>
+  
+  <div id="mobile-blurb">
+  <p>Do you want a location added?
+  <br>Fill out the <a href="https://forms.gle/k5XUmzb8dqWWHuQs7">sustainability map form</a></p>
+  </div>
+    
+</div>
+    
+<!--About modal-->
+    
+<div id="about-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>About this Map</h2><span class="close">&times;</span>
+    </div>
+    <div>
+        <p>This online tour is a pilot project by the Hamline Sustainability Thrive Team to collect and share sustainability stories from campus. This project was supported in part by funding from the Mansergh-Stuessy Fund of the Saint Paul Foundation.</p>
+        <p>This map underwent updates in the spring semester of 2024 as part of a group project in ANTH 1500/ECST 1500 Environment, Justice, and Well-Being. The update includes additional on-campus and off-campus location information.</p>
+    </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>  
+    
+
+<!--Flyover tour-->
+    
+<div id="flyover-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Flyover Tour of Hamline</h2><span class="close">&times;</span>
+    </div>
+    <div>
+        <iframe width="100%" height="500px" margin="auto" src="https://www.youtube.com/embed/2RwAvnucqRo" frameborder="0" allowfullscreen></iframe>
+        <p class="intro-text">produced by the Center for Global Environment Education, in partnership with Hamline Facilities Operations.</p>
+      
+    </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+ 
+    
+<!--AASHE Modals-->
+    
+<div id="andc-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Anderson Center</h2><span class="close">&times;</span>
+    </div>
+    <div class="prev-button" id="prev1">&lang;</div>
+    <div class="img-blurb"> <img src="photos/andc/andc.jpg" class="coverphoto">
+    <p class="introtext">With ample spaces to lounge, eat, meet and plan together, the Carol Young and Dennis L. Anderson Center serves as the open-door “campus living room”; it also serves as a hub for a variety of sustainability investments, activities, and research.</p>
+    <p class="introtext">Built to LEED Silver standards, the building opened in 2012 showcasing energy-efficient mechanisms, materials, and an eco-friendly exterior, including an 1800 square-foot green roof and 118 solar panels that produce close to 3% of the building’s energy. More than 3/4 of the building is day-lit with skylights and large windows in the two-story solarium, greatly reducing the need for indoor lighting, while sensors adjust temperature and airflow throughout the building to maintain low-energy heating and air conditioning. High-performance walls and insulation further reduce heat loss in winter and help keep the building cool in summer.</p>
+        <img class="detail" src="photos/andc/andc-terrace.JPG" style="float:left;padding-right:10px;margin-top:10px;margin-bottom:10px;">
+        <img class="detail" src="photos/andc/andc-skylight.JPG" style="padding-left:10px;margin-top:10px;margin-bottom:10px;">
+    <p class="introtext">To assist building visitors in lowering their material-use footprint, water bottle refill stations are dispersed throughout Anderson as well as across campus; the first floor bottle filler, alone, saved nearly 1,000 water bottles during Earth Week in April 2017! Two parking spaces in the garage beneath Anderson are reserved at all times for electric vehicle recharging.</p>
+        <img class="detail" src="photos/andc/water-refill.JPG" style="float:left;padding-right:10px;margin-top:10px;margin-bottom:10px;">
+        <img class="detail" src="photos/andc/hybrid.JPG" style="padding-left:10px;margin-top:10px;margin-bottom:10px;">
+        <img class="detail" src="photos/andc/composting-bins.jpg" style="float:left;margin-right:20px;margin-top:10px;margin-bottom:10px;width:45%;">
+    <p class="introtext">In addition to a variety of student centers, gathering and event spaces, Anderson Center houses Bishop’s Bistro, the main campus dining hall, where leftover food waste is minimized by being sent to either a local pig farm or to an industrial compost facility. The “Don’t Waste Our Future” composting pilot began on Anderson Center’s second floor in the spring of 2017 as a collaboration between the Sustainability Office, Aramark (whichs run all campus food &amp; dining services), ABM (custodial services), and Facilities. This pilot provides compostable napkins and single-use servingware for all take-away food items; composting receptacles; in-person education campaigns; and signage to educate and promote proper materials sorting. If the pilot succeeds (based on high compliance and low contamination rates in all waste streams), composting services can potentially expand across campus.</p>
+        <div style="float:left;clear:both;"><img class="detail" src="photos/andc/weighthewaste.jpg" style="float:left;padding-right:10px;margin-top:10px;margin-bottom:10px;width:55%;">
+        <img class="detail" src="photos/andc/compostables.JPG" style="padding-left:10px;margin-top:10px;margin-bottom:10px; width:45%;"></div>
+        <img class="detail" src="photos/andc/compost-napkins.png" style="width:100%;">
+      </div>
+    <div class="next-button" id="next1">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div> 
+    
+<div id="bikes-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Biking on Campus</h2><span class="close">&times;</span>
+    </div>
+    <div class="prev-button" id="prev2">&lang;</div>
+    <div class="img-blurb"> <img src="photos/bikes/bike-repair-station.JPG" class="coverphoto">     
+        <p class="introtext">The Twin Cities consistently ranks among the top 5 “most bikeable cities in the U.S.,” improving its vast network of cycling lanes every year - and Hamline has made it a priority to secure its place along those paths. Hamline encourages biking for commuting and leisure year-round* [*for those willing to brave the most inclement weather!], with bike racks and other infrastructure installed outside most building entryways, as well as inside dorms and student apartment garages for off-season storage. Between 2000-2007, bike parking infrastructure tripled on campus, and Hamline was one of the first locations for Nice Ride Bikes in St. Paul (see below). </p>
+        <p class="introtext">The <strong>Bike Repair Kit</strong> outside of Anderson Center invites cyclists to pump tires and make small repairs to bikes anytime, twelve months out of the year. </p>
+        <img class="detail" src="photos/bikes/bike-repair.jpg" style="float:left;margin-top:10px;margin-right:20px; margin-bottom:10px;">
+        <p class="introtext">Every spring and fall, Hamline also hosts <strong>bike maintenance days</strong> on the steps of Bush Library, allowing bikers to learn from a professional how to make essential bike repairs to keep their bikes in motion. <strong>Bob Jones of Bicycle Bob’s in Prescott, WI, has volunteered to run these workshops for 5 years and counting!</strong></p>
+        <p class="introtext"><strong><a href="https://www.niceridemn.org/">Nice Ride bikes</a></strong>, available April to November just south of Sorin Hall, allow students and community members to rent bikes and ride anywhere in the Twin Cities for $3 per single ½ hour ride; day passes are $6 for unlimited 30-minute rides between docking stations. Annual memberships further reduce those fees, to as low as $75 for a full year of unlimited 60-minute rides between stations.</p>
+                <img class="detail" src="photos/bikes/bikes.JPG" style="float:left;margin-top:10px;margin-right:20px;margin-bottom:10px;">
+        <p class="introtext">In an avid cycling community, <a href="http://mplsbikelove.com/twin-cities-used-bikes/">numerous local bike shops</a> also sell <strong>used bikes</strong>. Among these, <strong><a href="https://cyclesforchange.org/">Cycles for Change</a></strong>, located just 2.5 miles from campus, distinguishes itself for its commitment to serving the needs of the community. Its mission - to “support people in getting access to a used bicycle; free bicycle repair; training in safe, confident cycling; and opportunities to help grow a broad-based, equitable bicycling movement” - makes it a great next step for Hamline students and employees looking to invest more deeply in a life of cycling.</p>
+        
+      </div>  
+    <div class="next-button" id="next2">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+    
+<div id="church-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Hamline Church &amp; Sprout Garden</h2><span class="close">&times;</span>
+    </div>
+    <div class="prev-button" id="prev3">&lang;</div>
+    <div class="img-blurb"> <img src="photos/church/church.jpg" class="coverphoto">     
+    <p class="introtext">Hamline Church United Methodist has a longstanding commitment to building community with Hamline University. They regularly and generously host free meals and events for students, faculty and staff in their sanctuary, meeting spaces, and on the church lawn, building community that transcends religious affiliation. The church’s Green Team is currently working on plans to retrofit their building and grounds using sustainable methods and materials, inviting Hamline University Sustainability Committee members to contribute to all facets and phases of those plans.</p>
+    <p class="introtext">In 2009, a group of Hamline University students interested in organic, urban agriculture and farming practices organized as SPROUT (Students Proposing Real Options for Underutilized Territory). After gardening on campus, students collaborated with Hamline Church to build the SPROUT Garden on the church’s south side. This garden has flourished, becoming a means of providing free produce to local elders in summer months, as well as providing learning opportunities for children, Hamline University students, and local community members. And its contributions have not gone unrecognized: the SPROUT garden recently won the 2017 Sustainable Saint Paul Award in the “Local Food - Community” category!</p>
+      <img class="detail" src="photos/church/sproutgarden1.JPG" style="float:left;padding-right:10px;">
+        <img class="detail" src="photos/church/sproutgarden2.JPG" style="float:left;padding-left:10px;">
+      </div>  
+    <div class="next-button" id="next3">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+    
+<div id="steam-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Steam Plant</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev4">&lang;</div>
+    <div class="img-blurb"> <img src="photos/steam/steam.jpg" class="coverphoto">     
+    <p class="introtext">Although Hamline’s steam plant reflects the age of the campus (as Minnesota’s oldest higher learning institution), upgrades have kept the energy usage of the HVAC infrastructure surprisingly competitive. Variable-speed drive mechanisms paired with building sensors mean that chillers don’t work overtime to over-cool buildings, and an ingenious engineering feat means that the high-pressure steam system runs on only half the pressure of other such systems. Nonetheless, a considerable amount of excess heat is lost from the current system, and we look forward to the possibility of upgrading to 22nd century, post-fossil-fuel technology in the next 100 years... </p>
+      <img class="detail" src="photos/steam/steam2.jpg" style="float:left;padding-right:10px;">
+        <img class="detail" src="photos/steam/steam3.JPG" style="float:left;padding-left:10px;">
+      </div>  
+    <div class="next-button" id="next4">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+
+<div id="foodresourcecenter-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Food Resource Center (Newly Added!)</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev5">&lang;</div>
+    <div class="img-blurb"> <img src="photos/frc/frclogo.png" class="coverphoto">     
+    <p class="introtext">Hamline University’s Food Resource Center (FRC) was founded in 2017 as part of the Feed Brain Initiative.  It moved its current office to West Hall 110. Here is the mission statement: The Hamline Food Resource Center seeks to increase awareness of food insecurity on college campuses, increase food access for the Hamline community, and create a center that provides other resources to help students meet their basic needs in a manner that strives to uphold dignity and works towards food sovereignty. </p>
+    <p class="introtext">During the pandemic, it provided vital service by delivering food to students who were quarantined. It also provided Covid-19 test kits and masks. It provides a wide range of foods that are nutritious and culturally appropriated. It also provides prepared food that is ready to be eaten, daily products, vegetables, fruits, canned foods, nuts, etc. Students are also welcomed to send suggestions by completing the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdesn1BL0Js9nVr8i8028YkCod8j6sD0lNetHksNlWmkDmnCA/viewform?fbzx=6522414142857598111" target="_blank">suggestion form</a> or by contacting the FRC directly. </p>
+    <img class="detail" src="photos/frc/qrcode.jpg" style="float:left; padding-right:20px;">
+        <p class="introtext">Besides food products, the FRC provides hygiene products including feminine hygiene. The FRC helps more and more students every year, in 2022 there were 5,665 visits and 65, 630 pounds of food was distributed. In 2023, there were 8,777 visits and 102, 968 pounds of food was distributed. This is a 35 percent increase in the amount of visitation in a single year.</p>
+        <p class="introtext">The food resource center is funded through Hamline Undergraduate Student Congress (HUSC), and has partnered with multiple companies and organizations including Trader Joe's, Kitchen Coalition, Second Harvest Heartland and Good in the Hood. FRC is currently working to be “institutionalized” by being funded directly by the university rather than the student congress.</p>
+        <p class="introtext">FRC practices sustainability by providing the students with paper grocery bags that are recyclable. Also with help of the FRC’s partners like Trader Joe’s they are able to give students healthy food items that are at risk of expiration which fight against food waste entirely.</p>
+        <img class="detail" src="photos/frc/fridge.jpg" style="float:left;padding-right:10px;">
+        <img class="detail" src="photos/frc/cannedgoods.jpg" style="float:left;padding-left:10px;">
+      </div>   
+    <div class="next-button" id="next5">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div> 
+    
+<div id="garden-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Hamline Garden &amp; Learning Lawn</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev6">&lang;</div>
+    <div class="img-blurb"> <img src="photos/garden/garden.jpg" class="coverphoto">     
+    <p class="introtext">Over the past decade, campus gardens have been started by students, faculty, staff, and community members to build capacity for campus-based urban agriculture research, food provisioning, community appreciation and engagement. In 2009, a group of Hamline University students interested in organic, urban agriculture and farming practices organized as SPROUT (Students Proposing Real Options for Underutilized Territory). Building on the strong history of the SPROUT garden and other campus gardens, the Sustainability Office partnered with the Environmental Studies course “Feeding a Crowd” and students interested in building food infrastructure on campus to construct garden beds and a learning program around edible plants in 2016-17.</p>
+    <p class="introtext">With the help of the 2016 Piper Pathways group, we built a garden developed around the theme of appreciation, planted on Administrative Professionals’ Day, to communicate appreciation across campus with flowers and produce. In 2017, the “Feeding a Crowd” course moved the Appreciation bed to its current location, and along with an exploration of what it meant to practice Appreciation and Peace, built a second bed with an integrated Peace Pole. </p>
+    <p class="introtext">The Peace and Appreciation gardens have become a gathering place on the Hamline campus for sharing fresh meals and collaborative learning.</p>
+      <img class="detail" src="photos/garden/garden-party1.jpg" style="float:left;padding-right:10px;">
+    <img class="detail" src="photos/garden/garden-party2.jpg" style="float:left;padding-left:10px;">
+      </div>  
+    <div class="next-button" id="next6">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+    
+<div id="library-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Bush Memorial Library</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev7">&lang;</div>
+    <div class="img-blurb"> <img src="photos/library/library.jpg" class="coverphoto">
+    <p class="introtext">Bush Memorial Library supports sustainability research and scholarship richly. The <a href="http://bushlibraryguides.hamline.edu/sus-home">Sustainability Teaching and Learning research guide</a>, co-developed with the Sustainability Office and Reference and Instruction librarian Louann Terveer, highlights and consolidates library holdings, e-books, and articles to help instructors and administration integrate sustainability into the interdisciplinary teaching and learning mission of Hamline’s campus. The library has helped expand this collection, purchasing resources for Sustainability Teaching and Learning as well as Environmental Studies. In addition, the library regularly showcases sustainability-related book collections on floor displays, and co-hosts Sustainability Teach-Ins for faculty and other sustainability-related programming.</p>
+        <img class="detail" src="photos/library/sustainabilitybooks.JPG" style="float:left; padding-right:20px;">
+    <p class="introtext">Bush Library supports the overall sustainability of the campus community and its learning mission. Library staff facilitate and advocate for open access to campus research, and the library building itself provides ample space to work on group projects, study, get help from resource librarians to find peer-reviewed materials, or improve skills for teaching and learning. The first-floor <a href="https://www.hamline.edu/its/central-service-desk/">Central Service Desk</a> combines research and library services with IT support functions, allowing visitors to address multiple information needs in one location; the <a href="https://www.hamline.edu/offices/center-for-teaching-and-learning/">Center for Teaching and Learning (CTL)</a>, focused on fostering effective, innovative teaching and learning methods across campus, is housed on the second floor; and the basement-level <a href="https://www.hamline.edu/offices/writing-center/">Writing Center</a> works with students one-on-one to improve writing skills.</p>
+    <p class="introtext"><a href="https://www.hamline.edu/its/">Information Technology Service (ITS)</a>, also housed in Bush Library, is focused on improving digital literacy and applying effective technology solutions throughout the Hamline community. ITS educates the campus about energy-saving technology use and wise printing practices, and hosts regular electronics recycling drives on campus.</p>
+      </div>
+    <div class="next-button" id="next7">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+    
+<div id="landscaping-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Landscaping</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev8">&lang;</div>
+    <div class="img-blurb"> <img src="photos/landscaping/landscaping.jpg" class="coverphoto">     
+    <p class="introtext">Hamline University’s landscape management exemplifies its commitment to sustainable operations. Several decades ago, the campus transitioned from drought-vulnerable grass and annuals to perennial landscaping that requires far fewer inputs (water, maintenance, fertilization and pesticide use), as well as providing better habitat for numerous species.</p>
+        <img class="detail" src="photos/landscaping/andc-landscaping.jpg" style="float:left;clear:left;padding:10px 20px 10px 0px;">
+        <p class="introtext">Today, the campus is in bloom from the earliest days of spring through fall’s twilight; plentiful trees, flowers and bushes share space with lush lawns, while permeably-paved walkways criss-cross the grounds, preventing significant runoff and allowing for groundwater recharge. At night, LED lighting ensures the safety of these pathways throughout campus, and significantly reduces energy usage and cost.</p>
+        <p class="introtext">Edible landscaping populates the campus while helping to feed resident populations of birds, insects, pollinator species and people: white and red raspberries (behind Drew Residence Hall and Drew Fine Arts), serviceberries (near Bush Library and Drew Science), apples, buckeyes, aronia, cranberries and other edibles all help keep campus beautiful, welcoming, and sustaining. </p>
+        <img class="detail" src="photos/landscaping/pickingserviceberries.jpg" style="float:left;padding-right:10px;margin-bottom:20px;">
+        <img class="detail" src="photos/landscaping/sidewalk-lights.JPG" style="float:left;padding-left:10px;margin-bottom:20px;">
+        <iframe width="100%" height="500px" margin="auto" src="https://www.youtube.com/embed/2RwAvnucqRo" frameborder="0" allowfullscreen></iframe>
+      </div>  
+    <div class="next-button" id="next8">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+    
+<div id="dsci-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Sustainability Office &amp; Environmental Studies Program</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev9">&lang;</div>
+    <div class="img-blurb"> <img src="photos/dsci/dsci.jpg" class="coverphoto">     
+    <p class="introtext">Since 2015, the Sustainability Office (in Drew Science 120) has served as a generative hub for Hamline’s multiprogram sustainability efforts. By connecting those focused on sustainability in their disciplines to one another; tracking and improving sustainability-related data sets on campus; advocating for advances in collaborative campus planning; and developing the campus’s capacity to operate as a “living classroom” for students, faculty, staff, and the surrounding community, the office is advancing an overall commitment to sustainability on campus.</p>
+    <p class="introtext">Academic research and scholarship on sustainability are supported via programs for students and faculty that provide mentoring and professional development opportunities as well as financial support.</p>
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/Rd8_6ZnLLNQ" frameborder="0" allowfullscreen></iframe>
+    <p class="introtext">The Sustainability Office’s Thrive Team - composed of the Director of Sustainability, Resident and Visiting Fellows, Student Assistants, and members of the Sustainability Committee - collaborate with other academic programs on special projects and events, including:
+    <ul>
+        <li>a Clothing Swap, Repair &amp; Repurposing event with Colleen Bell’s Socially (Ir)responsible Fashion course and MPIRG;</li>
+        <li>Mathematics professor Sayonita Ghosh Hajra’s Fractal Tie-dye event with over 100 elementary school kids, and her Extended Day Learning collaboration with Hamline Elementary and the Mathematics Department;</li>
+        <li>and a “Garbology” collaboration combining pollution prevention and student waste analyses in Anthropology and other fields. “Weigh the Waste” food waste education events at Bishop’s Bistro, along with whole-building waste audits (see video below) and education campaigns at Anderson Center, conducted by the Sustainability Office with Anthropology and Environmental Studies students, reveal accomplishments and growth areas for waste minimization and diversion on campus.</li>
+    </ul>
+        </p>
+      <video width="100%" height="auto" controls>
+        <source src="photos/dsci/wasteaudit.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+        </video>
+      <img class="detail" src="photos/dsci/magnetFINAL.png" style="float:right;margin-left:20px;width:40%;">
+      <p class="introtext">The Sustainability Office has also developed numerous interdisciplinary initiatives that aim to build capacity around transformative systems thinking, including:
+      <ul>
+        <li style=><a href="https://imgrum.me/tag/thisthingstillworks?next=AQBMo0WZFbT4BVHUAqV77xhY4MqPjaQ8QaYHLXE5MLiZVtF9GbBAZ-6A38BNdi_0gQRRLC0QMKSLiSH3Wd-JEuEs9SsXGulg5L71_NKNot4xs_nLvpc6CJ1lRxOS4EtdBqg">#Thisthingstillworks</a> - an “anti-obsolescence appreciation campaign” inviting campus members to briefly describe an object of value in their own lives that’s remained useful to an advanced age and post its picture to social media</li>
+          <li>Changemakers Cinema Series (2016-17 academic year), screening bi-weekly sustainability, social justice and food systems-related documentary films</li>
+          <li>Collaborations with Residential Life, designing and producing magnets for all new students moving into campus housing to educate about recycling and composting on campus</li>
+          <li>Intensive workshops led by artist-scholars in expanded sustainability fields:</li>
+            <li style="margin-left:20px;">Janaki Ranpura’s “Logos in your Mouth” 3D-printed cookie cutters, modeling sustainability identification strategies and appreciation efforts for campus;</li>
+          <li style="margin-left:20px;">David Szanto’s “EcoGastronomy” performative tours of campus, using the power of imagination and memory to exchange and expand knowledge of food and food systems</li>
+          <li style="margin-left:20px;">Sarah Khan’s “Amrita Simla” and “Queens Migrant Kitchens” project presentations, engaging multimedia storytelling strategies for just and sustaining food practices</li>    
+      </ul>
+      </p>
+        <p class="introtext">The office’s Thrive Team Student Educators develop and lead projects and collaborate on research supported by the Sustainability Office, especially food access initiatives and waste prevention. Students co-produce events and train campus members during student orientation activities, conducting waste diversion training with student leaders like RAs, NSMs, and Hall Councils, as well as during mealtimes. And in the undergraduate Environmental Studies program (co-located in Drew Science Building), students choose a concentration, take a range of courses across the breadth of studies of the environment, and participate in a cohort that engages a set of capstone projects together. Across these methodologies, students tutor an expanding campus network about campus sustainability projects, directing campus narratives on sustainability themes.</p>
+
+         
+        <img class="detail" src="photos/dsci/pie-chart.png" style="width:100%;">
+      </div>   
+    <div class="next-button" id="next9">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+    
+<div id="cgee-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Center for Global Environmental Education (CGEE)</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev10">&lang;</div>
+    <div class="img-blurb"> <img src="photos/cgee/cgee.jpg" class="coverphoto">     
+    <p class="introtext">For over twenty years, the mission of the Center for Global Environmental Education is to foster environmental literacy and stewardship in citizens of all ages. CGEE’s work is centered around its four cornerstones: Graduate Education and Professional Development, Community Outreach, k-12 and Youth Resources, and Educational Multimedia Production.</p>
+    <p class="introtext">CGEE’s longest running professional development program is the annual River Institutes. There are currently four River Institutes, taking place on the Saint Croix River, upper Mississippi River, Trinity River in Texas, and the Mississippi Delta in Louisiana. At each location, the river provides context for inquiry-based environmental and science learning, including macroinvertebrates, forestry, geology, and engineering. </p>
+    <img class="detail" src="photos/cgee/riverinst1.jpg" style="float:left;padding-right:10px;margin-bottom:20px;">
+        <img class="detail" src="photos/cgee/riverinst2.jpg" style="float:left;padding-left:10px;margin-bottom:20px;">
+        <img class="detail" src="photos/cgee/cgee-multimedia.jpg" style="float:left;padding-right:20px;margin-bottom:20px;">
+    <p class="introtext">CGEE produces numerous interactive multimedia environmental education projects with community partners locally, regionally and nationally, including the award-winning Waters to the Sea series. The Mississippi River Multimedia Gallery (pictured here) is a recent project that features an interactive map of the river embedded with photos, videos, and games. The table-size touch screen is currently on display at Lake Itasca State Park as well as a visitor center at the delta. </p>
+    <img class="detail" src="photos/cgee/statefair-cgee.jpg" style="float:left;padding-right:20px;margin-bottom:20px; clear:both;">
+    <p class="introtext">CGEE is a founding member of the WaterShed Partners, a partnership of 70+ organizations in the Twin Cities that coordinates water education and outreach efforts. Learn more about the WaterShed Partners at <a href="http://cleanwatermn.org/">cleanwatermn.org</a>. CGEE’s biggest community outreach program is Adopt-a-Drain. The program encourages residents in Saint Paul, Minneapolis, and several suburbs to adopt their storm drain by raking up leaves and picking up trash and dog poop to keep pollution out of the river. </p>
+    
+        <p class="introtext">CGEE has hosted an exhibit in the Eco Experience Building at the Minnesota State Fair since 2005. CGEE’s exhibit features the StormDrain Goalie photobooth and eco-arcade games, using fun to educate about clean water. </p>
+        <img class="detail" src="photos/cgee/sdg1.jpg" style="float:left;padding-right:10px;margin-bottom:10px;">
+        <img class="detail" src="photos/cgee/sdg2.jpg" style="float:left;padding-left:10px;margin-bottom:10px;">
+      </div>
+    <div class="next-button" id="next10">&rang;</div>
+      <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+       
+<div id="compactors-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Trash &amp; Recycling Compactors</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev11">&lang;</div>
+    <div class="img-blurb"> <img src="photos/compactors/compactors-new.jpg" class="coverphoto">     
+    <p class="introtext">These two compactors represent an important part of Hamline’s waste system. One holds most of the recycling collected from across campus; the other is used for trash from campus dorms. The benefit of using these compactors is that trash and recycling doesn’t have to be collected as often, saving money and work and reducing transportation-related pollution.</p>
+    <img class="detail" src="photos/compactors/trash-carts.JPG" style="float:left;padding-right:20px;">
+    <p class="introtext">Facilities Services has also reduced on-campus pollution related to the transportation of waste by inventing ingenious carts, towed by electric vehicles charged on campus, that can haul six 90-gallon wheeled waste and recycling bins.</p>
+        <p class="introtext">Diverting campus waste toward reuse streams via recycling - in addition to benefitting more obvious goals of reducing virgin resource use globally, and our campus’s carbon footprint locally - keeps campus from paying taxes and tipping fees on trash, and helps free up more funds to pay for other green projects around campus. Our most-recently-available campus-wide recycling rate was estimated to be 15.5% [academic year 2015-16] - a low rate compared to other Twin Cities-area colleges and universities. While this leaves a great deal of room for improvement to our waste diversion compliance on campus, we can look forward to further energy, materials, and cost savings as we increase participation in these activities on campus.</p>
+        <img class="detail" src="photos/compactors/where-does-it-go.png" style="width:100%;">
+      </div>  
+    <div class="next-button" id="next11">&rang;</div>
+          <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+
+ 
+<div id="outdoorclassroom-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Pierce Butler Stormwater Prairie Outdoor Classroom</h2><span class="close">&times;</span>
+    </div>
+    <div class ="prev-button" id="prev12">&lang;</div>
+    <div class="img-blurb"> <img src="photos/pierce-butler/stormwater.jpg" class="coverphoto">     
+    <p class="introtext">During the fall of 2017, Hamline University, in collaboration with Hamline-Midway Environmental Group, has the opportunity to be involved in a prairie restoration/rainwater management project sponsored by Capitol Region Watershed District. The site is a short walk from campus, on the inside of the southwest cloverleaf leading from Snelling Avenue to Pierce Butler Route. The site, which has been in planning stages for over seven years, will soon act as an “outdoor classroom” for Hamline University and other schools in the area, complete with educational signage.</p>
+    <p class="introtext">In September, a controlled burn prepared the site for prairie planting; the small holding pond at the site remains as before. Soon, native plants will be seeded and planted here by community members: In October 2017, two <a href="http://luciamonge.com/en/portfolio/participatory/671" target="_blank">Plantón Móvil</a> events will be hosted by Hamline Environmental Studies students in collaboration with artist Lucia Monge, who conceptualized and began organizing these community-based parade-and-planting events in 2010 in her native Peru. On her website, Monge notes that in Spanish, the word “plantón” means both “sapling” and “sit-in,” and she sees these events activating both senses of the word - a green “peaceful protest.” Monge has now organized these events on three continents, and describes them as a way of “<a href="https://vimeo.com/146107585">giving plants and trees the opportunity to walk down the streets of their city. At the end of each walk, we co-create community public green areas</a>.”</p>
+      <video width="100%" height="auto" controls>
+        <source src="photos/pierce-butler/burning-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <p class="introtext">In the Hamline-Midway iterations of this project, plant species native to the region will be carried down Snelling Avenue to the site and planted by students from Hamline University, Hamline Elementary, and by families, neighbors and other interested community members. All are welcome! </p>
+        <p class="introtext">Click the image below to get a closer look at the map and plan for the site.</p>
+        <a href="photos/pierce-butler/Pierce%20Butler%20Basin_v161117%208.5%20x%2011.pdf" target="_blank"><img class="thumbnail" src="photos/pierce-butler/mapthumbnail.png" style="width:100%;"></a>
+      </div>   
+    <div class="next-button" id="next12">&rang;</div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div> 
+    
+<div id="newellpark-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2><a href="https://www.stpaul.gov/facilities/newell-park">Newell Park</a></h2><span class="close">&times;</span>
+    </div>
+    <p class="introtext">Basketball Court, BBQ Grill, Benches, Fire Pit, Event Building, Picnic Area, Playground, Restroom Facilities, Shelter, and a Softball Field.</p>
+      </div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div> 
+    
+<div id="hortonpark-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2><a href="https://www.stpaul.gov/facilities/horton-park">Horton Park</a></h2><span class="close">&times;</span>
+    </div>
+    <p class="introtext">Benches, Arboretum, and Picnic Area</p>
+      </div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+
+</div>
+
+<div id="griggspark-modal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2><a href="https://www.stpaul.gov/facilities/griggs-park">Griggs Park</a></h2><span class="close">&times;</span>
+    </div>
+    <p class="introtext">Baseball Field, Basketball Court, Picnic Area, Playground, Sledding, Hill (Gentle Slope), Two Soccer Fields, and a Softball Field.
+      </p>
+      </div>
+    <div style="clear:both;"> </div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+  </div>
+ 
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wHen1hz1R9YS_E59dfKPtR48ODh36Ug&callback=initMap"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>	
+    <script src="map.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script>
+    $(".accordion").accordion({
+        heightStyle: "content",
+        collapsible: true,
+        active: false
+    });
+                
+    $(".allbutton").click(function(){
+    
+        $(".accordion").accordion({
+            active:false
+        });
+        
+    });
+    
+    </script>
+</body>
+</html> 
